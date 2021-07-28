@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:padding="4dp"
+>
+  <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/round_05"
+    
+  >
+    <TextView
+      android:id="@+id/row_word__word"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20dp"
+      android:color="#ffffff"
+      android:gravity="center_vertical"
+      android:padding="6dp"
+    />
+  </RelativeLayout>
+</FrameLayout>
+

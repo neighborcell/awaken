@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--ボタン通常時のレイアウト-->
+  <item state_pressed="false">
+    <shape android:shape="rectangle">
+      <corners
+        android:topRightRadius="3dp"
+        android:bottomRightRadius="3dp"
+        android:bottomLeftRadius="3dp"
+        android:topLeftRadius="3dp"
+      />
+      <solid
+        android:color="#5A5C61"
+      />
+    </shape>
+  </item>
+  <!--ボタン押下時のレイアウト-->
+  <item state_pressed="true">
+    <shape android:shape="rectangle">
+      <corners
+        android:topRightRadius="3dp"
+        android:bottomRightRadius="3dp"
+        android:bottomLeftRadius="3dp"
+        android:topLeftRadius="3dp"
+      />
+      <solid
+        android:color="#5A5C61"
+      />
+    </shape>
+  </item>
+</selector>
+

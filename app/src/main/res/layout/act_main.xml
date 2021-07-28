@@ -1,0 +1,27 @@
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <FrameLayout
+    android:id="@+id/act_main__scene"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  </FrameLayout>
+  
+  <FrameLayout
+    android:id="@+id/act_main__dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  </FrameLayout>
+  
+  <fragment
+    android:id="@+id/act_main__log"
+    android:name="com.neighborcell.awaken.ui.FrgLog"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  >
+  </fragment>
+  
+</FrameLayout>

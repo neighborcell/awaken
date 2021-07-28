@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="app_name">my辞書</string>
+  
+  <string name="search_title">my辞書</string>
+  <string name="search_init">my辞書</string>
+  <string name="search_empty">辞書に該当ありません。追加しますか？</string>
+  <string name="search_add_word">辞書に登録する</string>
+  <string name="search_add_mean">意味を登録する</string>
+  
+</resources>
