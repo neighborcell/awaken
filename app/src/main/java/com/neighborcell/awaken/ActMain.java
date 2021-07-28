@@ -29,7 +29,7 @@ public class ActMain extends Activity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.act_main);
     TsLog.debug();
-
+    
     try
     {
       dbMain = new TsDb(getApplicationContext(), DB_FILE, DB_VER);
