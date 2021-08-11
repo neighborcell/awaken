@@ -36,7 +36,7 @@ public class AdpMeaning extends TsAdapter<DtoMeaning>
     
     view.setOnClickListener( new OnClickListener(){
       public void onClick(View v){
-        TsEvt.req(new EvtEditMeaning(row));
+        TsEvt.req(new EvtDig(new DigMeaning(row),true));
       }
     });
   }

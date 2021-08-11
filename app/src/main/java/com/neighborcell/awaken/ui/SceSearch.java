@@ -14,24 +14,26 @@ import java.util.*;
 
 public class SceSearch extends ListFragment implements TsBackListener
 {
-
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
   {
     //TsLog.debug();
     View root = inflater.inflate(R.layout.sce_search, container, false);
 
-    // edit word
+    // open word dialog when empty search
     root.findViewById(R.id.sce_search__empty_add).setOnClickListener(OnClickEditWord);
 
     // search
     root.findViewById(R.id.sce_search__search).setOnClickListener(ClkSearch);
     ((EditText)root.findViewById(R.id.sce_search__keyword)).setOnEditorActionListener(OnEditKeyword);
     
+    // for push back
+    TsEvt.req(new EvtSearch(""));
+    
     return root;
   }
 
-  // close mean
+  // close dialog
   public void onEvt(EvtDig evt)
   {
     if(evt.dig instanceof DigMeaning && !evt.isVisible)
@@ -41,15 +43,8 @@ public class SceSearch extends ListFragment implements TsBackListener
       TsEvt.req(new EvtEditWord(keyword));
     }
   }
-  
-  // edit mean
-  public void onEvt(EvtEditMeaning evt)
-  {
-    //TsLog.debug();
-    TsEvt.req(new EvtDig(new DigMeaning(evt.word),true));
-  }
-  
-  // edit word
+
+  // open word dialog when empty search
   private OnClickListener OnClickEditWord = new OnClickListener(){
     @Override
     public void onClick(View p1)
@@ -60,7 +55,7 @@ public class SceSearch extends ListFragment implements TsBackListener
     }
   };
 
-  // edit word
+  // words list
   public void onEvt(EvtEditWord evt)
   {
     //TsLog.debug();
@@ -119,6 +114,7 @@ public class SceSearch extends ListFragment implements TsBackListener
     EditText edit = getView().findViewById(R.id.sce_search__keyword);
     String keyword = edit.getText().toString().trim();
     //TsEvt.run(new TsEvtLog(keyword));
+    
     TsEvt.req(new EvtSearch(keyword));
   }
 
@@ -180,7 +176,6 @@ public class SceSearch extends ListFragment implements TsBackListener
   @Override
   public boolean onBackPressed()
   {
-    //TsLog.debug();
     if (null == getListAdapter())
     {
       //TsLog.debug();

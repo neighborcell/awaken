@@ -12,7 +12,7 @@ public class TsEvt
 
   final static private ExecutorService exec = Executors.newCachedThreadPool();
   static private List<Object> evtsvrs = new ArrayList<Object>();
-
+  
   static synchronized public void addEvtSvr(Object evtsvr)
   {
     evtsvrs.add(evtsvr);
